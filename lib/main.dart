@@ -18,6 +18,8 @@ class _MyAppState extends State<MyApp> {
       title: 'Task',
       home: Scaffold(
         appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Color.fromARGB(246, 0, 0, 0),
           title: const Text('Task'),
           actions: [
             IconButton(
@@ -27,6 +29,7 @@ class _MyAppState extends State<MyApp> {
                 });
               },
               icon: const Icon(Icons.delete),
+              color: Color.fromARGB(221, 199, 15, 232),
             ),
             const SizedBox(
               width: 20,
@@ -85,6 +88,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
             itemBuilder: (BuildContext context, int index) {
               return ListTile(
                 title: Text(taskList[index]),
+                textColor: Colors.pink,
                 leading: IconButton(
                   onPressed: () => clearTask(index),
                   icon: const Icon(Icons.delete),
